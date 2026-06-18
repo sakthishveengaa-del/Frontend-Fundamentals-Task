@@ -19,39 +19,53 @@ function StringArray() {
     setResult("");
   };
 
-  // 🔥 ORIGINAL DISPLAY
+  // ORIGINAL DISPLAY
   const showOriginal = () => {
     setResult(list.join(", "));
   };
 
-  // 🔥 A-Z (sorted display only)
+  // A-Z
   const sortAZ = () => {
     setResult([...list].sort().join(", "));
   };
 
-  // 🔥 Z-A (reverse sort display only)
+  // Z-A
   const sortZA = () => {
     setResult([...list].sort().reverse().join(", "));
   };
 
-  // 🔥 Reverse order display only
+  // REVERSE
   const reverseList = () => {
     setResult([...list].slice().reverse().join(", "));
   };
 
-  // 🔥 First item
+  // FIRST
   const showFirst = () => {
     setResult("First: " + list[0]);
   };
 
-  // 🔥 Last item
+  // LAST
   const showLast = () => {
     setResult("Last: " + list[list.length - 1]);
   };
 
+  // 🔥 FORMAT RESULT DISPLAY
+  const formatResult = (value) => {
+    if (!value) return "";
+
+    if (value.includes(":")) {
+      const parts = value.split(":");
+      return `${parts[0]} [${parts[1].trim()}]`;
+    }
+
+    return `[${value}]`;
+  };
+
   return (
     <div style={{ padding: 20 }}>
-      <Typography variant="h6">String Array Operations</Typography>
+      <Typography variant="h6">
+        String Array Operations
+      </Typography>
 
       {/* INPUT */}
       <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
@@ -67,7 +81,11 @@ function StringArray() {
       </Stack>
 
       {/* BUTTONS */}
-      <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: "wrap" }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ mt: 2, flexWrap: "wrap" }}
+      >
         <Button onClick={showOriginal}>Original</Button>
         <Button onClick={sortAZ}>A-Z</Button>
         <Button onClick={sortZA}>Z-A</Button>
@@ -76,16 +94,16 @@ function StringArray() {
         <Button onClick={showLast}>Last</Button>
       </Stack>
 
-      {/* OUTPUT */}
+      {/* OUTPUT (FIXED FORMAT) */}
       {result && (
         <Typography sx={{ mt: 3, fontWeight: "bold" }}>
-          {result}
+          Result: {formatResult(result)}
         </Typography>
       )}
 
-      {/* ORIGINAL ARRAY ALWAYS SAFE */}
+      {/* ORIGINAL ARRAY */}
       <Typography sx={{ mt: 2 }}>
-        Original Array: {list.join(", ")}
+        Original Array: [{list.join(", ")}]
       </Typography>
     </div>
   );

@@ -22,12 +22,12 @@ function NumberArray() {
     setResult(list.join(", "));
   };
 
-  // ASC (A-Z style)
+  // ASC
   const sortAsc = () => {
     setResult([...list].sort((a, b) => a - b).join(", "));
   };
 
-  // DESC (Z-A style)
+  // DESC
   const sortDesc = () => {
     setResult([...list].sort((a, b) => b - a).join(", "));
   };
@@ -47,9 +47,23 @@ function NumberArray() {
     setResult("Min: " + Math.min(...list));
   };
 
+  // 🔥 FORMAT RESULT (ONLY DISPLAY FIX)
+  const formatResult = (value) => {
+    if (!value) return "";
+
+    if (value.includes(":")) {
+      const parts = value.split(":");
+      return `${parts[0]} [${parts[1].trim()}]`;
+    }
+
+    return `[${value}]`;
+  };
+
   return (
     <div style={{ padding: 20 }}>
-      <Typography variant="h6">Number Array Operations</Typography>
+      <Typography variant="h6">
+        Number Array Operations
+      </Typography>
 
       {/* INPUT */}
       <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
@@ -65,25 +79,29 @@ function NumberArray() {
       </Stack>
 
       {/* BUTTONS */}
-      <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: "wrap" }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ mt: 2, flexWrap: "wrap" }}
+      >
         <Button onClick={showOriginal}>Original</Button>
         <Button onClick={sortAsc}>Asc</Button>
-        <Button onClick={sortDesc}>Des</Button>
+        <Button onClick={sortDesc}>Desc</Button>
         <Button onClick={reverseList}>Reverse</Button>
         <Button onClick={showMax}>Max</Button>
         <Button onClick={showMin}>Min</Button>
       </Stack>
 
-      {/* OUTPUT */}
+      {/* OUTPUT (FIXED FORMAT ONLY) */}
       {result && (
         <Typography sx={{ mt: 3, fontWeight: "bold" }}>
-          {result}
+          Result: {formatResult(result)}
         </Typography>
       )}
 
       {/* ORIGINAL ARRAY */}
       <Typography sx={{ mt: 2 }}>
-        Original Array: {list.join(", ")}
+        Original Array: [{list.join(", ")}]
       </Typography>
     </div>
   );
