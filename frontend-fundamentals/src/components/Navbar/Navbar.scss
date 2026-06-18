@@ -1,0 +1,52 @@
+.MuiAppBar-root {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  
+  .MuiToolbar-root {
+    justify-content: center !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    // Hide scrollbars
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .MuiStack-root {
+    flex-wrap: nowrap !important;
+    padding: 6px 0;
+  }
+  
+  .MuiButton-root {
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+    border-radius: 6px !important;
+    padding: 6px 14px !important;
+    margin: 0 4px !important;
+    white-space: nowrap !important;
+    transition: all 0.15s ease-in-out !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    text-transform: none !important;
+    
+    &:hover {
+      color: var(--text-main) !important;
+      background-color: #f1f5f9 !important;
+    }
+    
+    &.active {
+      color: var(--primary-hover) !important;
+      background-color: var(--primary-light) !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+

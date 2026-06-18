@@ -1,0 +1,101 @@
+.task3-container {
+  max-width: 500px;
+  margin: 32px auto;
+  padding: 0 20px !important;
+
+  .MuiCard-root {
+    background-color: var(--bg-card) !important;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-md) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 20px !important;
+  }
+  
+  .MuiTypography-h5 {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  // Input spacing
+  .input-box {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    
+    .MuiTextField-root {
+      flex: 1;
+    }
+    
+    .MuiButton-contained {
+      padding: 0 20px !important;
+      background-color: var(--primary-color) !important;
+      color: #ffffff !important;
+      &:hover {
+        background-color: var(--primary-hover) !important;
+      }
+    }
+  }
+
+  // Operation buttons (outlined)
+  .MuiStack-root {
+    .MuiButton-outlined {
+      color: var(--text-muted) !important;
+      border-color: var(--border-color) !important;
+      background-color: #f8fafc !important;
+      font-weight: 500 !important;
+      text-transform: none !important;
+      border-radius: 6px !important;
+      
+      &:hover {
+        background-color: var(--primary-light) !important;
+        border-color: #cbd5e1 !important;
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+
+  // Output container
+  div[style*="marginTop: 20px"],
+  div[style*="margin-top: 20px"] {
+    margin-top: 24px !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // spacing between item cards
+    
+    .MuiTypography-root {
+      margin: 0 !important;
+      font-size: 0.9rem !important;
+      color: var(--text-main) !important;
+      background-color: #f8fafc !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 6px !important;
+      padding: 12px 16px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.15s ease-in-out;
+      
+      &:hover {
+        background-color: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+      }
+      
+      b {
+        font-weight: 600 !important;
+        color: var(--text-muted) !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

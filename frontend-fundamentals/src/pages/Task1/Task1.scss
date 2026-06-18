@@ -1,0 +1,91 @@
+.task1 {
+  min-height: calc(100vh - 64px); // Account for AppBar height
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px !important;
+}
+
+.task1-card {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--bg-card) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 28px 24px !important;
+  
+  .MuiTypography-h4 {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    text-align: center;
+    font-size: 1.25rem !important;
+    margin-bottom: 8px !important;
+    letter-spacing: -0.025em;
+  }
+  
+  .count {
+    margin: 20px auto !important;
+    text-align: center;
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 20px !important;
+    max-width: 160px;
+    font-feature-settings: "tnum"; // tabular numerals for stable layout when digits change
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  }
+  
+  .MuiStack-root {
+    margin-top: 24px !important;
+  }
+  
+  // Custom button styling overrides for Task 1
+  .MuiButton-root {
+    height: 40px !important; // standard comfortable height
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
+  }
+
+  .MuiButton-containedPrimary {
+    background-color: #1976d2 !important; // standard, clean real-world blue
+    color: #ffffff !important;
+    &:hover {
+      background-color: #1565c0 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+  
+  .MuiButton-containedSecondary {
+    background-color: #9c27b0 !important; // standard purple secondary
+    color: #ffffff !important;
+    &:hover {
+      background-color: #7b1fa2 !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+  
+  .MuiButton-outlinedError {
+    color: #d32f2f !important;
+    border-color: rgba(211, 47, 47, 0.5) !important;
+    background-color: transparent !important;
+    &:hover {
+      background-color: rgba(211, 47, 47, 0.04) !important;
+      border-color: #d32f2f !important;
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,197 @@
+.task5-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 20px 40px !important;
+  
+  .title {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    font-size: 1.35rem !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+// Error Message banner
+.error {
+  background-color: #fee2e2 !important;
+  border: 1px solid #fca5a5 !important;
+  color: #b91c1c !important;
+  padding: 10px 14px !important;
+  border-radius: 6px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 16px !important;
+}
+
+// Clean Form card Layout
+.form-box {
+  margin-top: 16px !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+  gap: 12px !important;
+  align-items: flex-end !important;
+  background-color: var(--bg-card) !important; // standard card background
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  box-shadow: var(--shadow-sm) !important;
+
+  .field {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    
+    label {
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: var(--text-muted) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+  
+  .MuiButton-contained {
+    height: 56px !important; // Align with MuiTextField default size
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    
+    &:hover {
+      background-color: var(--primary-hover) !important;
+    }
+  }
+}
+
+// Search bar section
+.search-box {
+  margin-top: 20px !important;
+  display: flex !important;
+  gap: 12px !important;
+  align-items: center !important;
+  max-width: 450px !important;
+  
+  .MuiTextField-root {
+    flex: 1 !important;
+  }
+  
+  .MuiButton-outlined {
+    height: 56px !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-muted) !important;
+    font-weight: 500 !important;
+    
+    &:hover {
+      background-color: var(--primary-light) !important;
+      border-color: var(--primary-color) !important;
+      color: var(--primary-hover) !important;
+    }
+  }
+}
+
+// Modern Table styling
+.MuiTable-root {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  
+  .MuiTableHead-root {
+    .MuiTableCell-root {
+      background-color: #f8fafc !important;
+      color: var(--text-main) !important;
+      font-weight: 600 !important;
+      font-size: 0.8rem !important;
+      border-bottom: 2px solid var(--border-color) !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      padding: 12px 16px !important;
+    }
+  }
+  
+  .MuiTableBody-root {
+    .MuiTableRow-root {
+      transition: background-color 0.15s ease !important;
+      
+      &:nth-of-type(even) {
+        background-color: #f8fafc;
+      }
+      
+      &:hover {
+        background-color: #f1f5f9 !important;
+      }
+      
+      &:last-of-type .MuiTableCell-root {
+        border-bottom: none !important;
+      }
+    }
+    
+    .MuiTableCell-root {
+      font-size: 0.875rem !important;
+      color: var(--text-main) !important;
+      padding: 12px 16px !important;
+      border-bottom: 1px solid var(--border-color) !important;
+    }
+  }
+  
+  // Action column cell padding
+  td:last-of-type {
+    display: flex !important;
+    gap: 6px !important;
+    
+    .MuiButton-root {
+      padding: 4px 10px !important;
+      font-size: 0.75rem !important;
+      min-width: 0 !important;
+      text-transform: none !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      border-radius: 4px !important;
+      font-weight: 600 !important;
+      
+      &:first-of-type {
+        color: var(--primary-color) !important;
+        &:hover {
+          background-color: var(--primary-light) !important;
+        }
+      }
+      
+      &[color="error"],
+      &.MuiButton-colorError {
+        color: #d32f2f !important;
+        &:hover {
+          background-color: #fde8e8 !important;
+        }
+      }
+    }
+  }
+}
+
+// Table responsiveness for mobile screens
+@media (max-width: 768px) {
+  .MuiTable-root {
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// Dialog content alignment
+.MuiDialog-paper {
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-md) !important;
+  
+  .MuiDialogTitle-root {
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    color: var(--text-main) !important;
+  }
+  
+  p {
+    margin-bottom: 6px;
+    font-size: 0.95rem !important;
+    color: var(--text-main) !important;
+  }
+}

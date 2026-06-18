@@ -1,0 +1,117 @@
+// Container layout for Task 2 page
+#root > div:not(.task3-container):not(.task5-container):has(> .MuiStack-root > button) {
+  max-width: 800px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 32px 24px !important;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  
+  // Clean toggle tab spacing
+  & > .MuiStack-root {
+    margin-bottom: 24px !important;
+    justify-content: center !important;
+    
+    .MuiButton-root {
+      text-transform: none !important;
+      padding: 6px 16px !important;
+      border-radius: 6px !important;
+      
+      &.MuiButton-contained {
+        background-color: var(--primary-color) !important;
+        color: #ffffff !important;
+        &:hover {
+          background-color: var(--primary-hover) !important;
+        }
+      }
+      
+      &.MuiButton-outlined {
+        color: var(--text-muted) !important;
+        border-color: var(--border-color) !important;
+        
+        &:hover {
+          background-color: #f1f5f9 !important;
+          border-color: var(--text-muted) !important;
+        }
+      }
+    }
+  }
+}
+
+// Spacing and outputs for inner array components restricted to Task 2 only
+#root > div:has(> .MuiStack-root > button) > div > div {
+  margin-top: 16px;
+  
+  .MuiTypography-h6 {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 12px !important;
+  }
+  
+  // Input row
+  .MuiStack-root:first-of-type {
+    .MuiButton-contained {
+      background-color: var(--primary-color) !important;
+      &:hover {
+        background-color: var(--primary-hover) !important;
+      }
+    }
+  }
+  
+  // Operation buttons tag list
+  .MuiStack-root:nth-of-type(2) {
+    gap: 8px !important;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    
+    .MuiButton-root {
+      background-color: #f8fafc !important;
+      color: var(--text-muted) !important;
+      border: 1px solid var(--border-color) !important;
+      font-weight: 500 !important;
+      text-transform: none !important;
+      padding: 6px 12px !important;
+      font-size: 0.85rem !important;
+      border-radius: 6px !important;
+      
+      &:hover {
+        background-color: var(--primary-light) !important;
+        color: var(--primary-color) !important;
+        border-color: #cbd5e1 !important;
+      }
+    }
+  }
+  
+  // Output result block (when active)
+  .MuiTypography-root[style*="font-weight: bold"],
+  p.MuiTypography-root:nth-last-of-type(2) {
+    margin-top: 20px !important;
+    padding: 12px 16px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+    border-radius: 6px !important;
+    font-size: 0.925rem !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  }
+  
+  // Original array at bottom
+  p.MuiTypography-root:last-of-type {
+    margin-top: 16px !important;
+    border-top: 1px solid var(--border-color) !important;
+    padding-top: 12px !important;
+    color: var(--text-muted) !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+
+
+
+
+
+

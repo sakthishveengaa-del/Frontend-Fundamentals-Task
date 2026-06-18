@@ -1,0 +1,134 @@
+// Container layout for Task 4
+#root > div:not(.task3-container):not(.task5-container):has(> pre) {
+  max-width: 800px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 32px 24px !important;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  
+  .MuiTypography-h6 {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+// Clean light-themed developer-style code console
+#root > div:has(> pre) > pre {
+  font-family: monospace !important;
+  font-size: 0.9rem !important;
+  background-color: #f8fafc !important; // Light Slate-50 background
+  color: var(--text-main) !important;    // Slate dark text
+  padding: 16px 20px !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: 4px solid var(--primary-color) !important; // Stripe accent blue
+  border-radius: 6px !important;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+  line-height: 1.5 !important;
+}
+
+// Spacing for lists
+#root > div:has(> pre) > p.MuiTypography-root {
+  margin-top: 6px !important;
+  font-size: 0.9rem !important;
+  color: var(--text-muted) !important;
+  
+  &:nth-of-type(3) {
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+// Spacing for operation stacks
+#root > div:has(> pre) > .MuiStack-root {
+  margin-top: 12px !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  align-items: center !important;
+  
+  &:last-of-type {
+    border-bottom: none !important;
+  }
+  
+  .MuiTextField-root {
+    &[style*="width: 200"],
+    &[style*="width: 200px"] {
+      width: 200px !important;
+    }
+  }
+  
+  .MuiButton-root {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 8px 20px !important;
+    height: 40px !important; // standard height
+    border-radius: 6px !important;
+    
+    &:hover {
+      background-color: var(--primary-hover) !important;
+    }
+    
+    &[color="error"],
+    &.MuiButton-colorError {
+      background-color: #d32f2f !important; // standard MUI error red
+      color: #ffffff !important;
+      &:hover {
+        background-color: #b71c1c !important;
+      }
+    }
+  }
+}
+
+// Dialog boxes styling
+.MuiDialog-root {
+  .MuiPaper-root {
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-md) !important;
+  }
+  
+  div[style*="padding: 20"],
+  div[style*="padding: 20px"] {
+    padding: 24px !important;
+    text-align: center;
+    
+    p {
+      margin-bottom: 16px !important;
+      font-weight: 600 !important;
+      color: var(--text-main) !important;
+    }
+    
+    .MuiButton-root {
+      margin: 0 4px !important;
+      text-transform: none !important;
+      padding: 6px 18px !important;
+      height: 40px !important;
+      border-radius: 6px !important;
+      
+      &[color="error"] {
+        background-color: #d32f2f !important;
+        color: #ffffff !important;
+        &:hover {
+          background-color: #b71c1c !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
